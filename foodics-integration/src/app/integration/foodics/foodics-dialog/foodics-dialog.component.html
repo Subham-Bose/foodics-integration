@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>
+    Foodics
+</h2>
+<div mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Client Id</mat-label>
+                <input matInput formControlName="clientId">
+            </mat-form-field>
+        </div>
+        <div mat-dialog-action>
+            <button type="submit" mat-raised-button class="primary" [disabled]="!form.valid">Submit</button>
+        </div>
+    </form>
+</div>
